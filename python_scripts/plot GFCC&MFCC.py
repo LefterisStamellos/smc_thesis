@@ -1,42 +1,10 @@
 
-# coding: utf-8
-
-# In[ ]:
-
-# %matplotlib inline
-
-
-# In[ ]:
-
 from essentia.standard import MonoLoader,GFCC,Windowing,Spectrum,FrameGenerator,Envelope,ERBBands,MFCC
-
-
-# In[ ]:
-
 import numpy as np
-
-
-# In[ ]:
-
 import os
-
-
-# In[ ]:
-
 import matplotlib.pyplot as plt
-
-
-# In[ ]:
-
 from pylab import imshow
-
-
-# In[ ]:
-
 from scipy.interpolate import interp1d
-
-
-# In[ ]:
 
 pardir = '../database/real_set_7_classes_unbalanced_wavs/hihat/'
 
@@ -50,14 +18,7 @@ filenames = ['alpha_10_mini_x-hats_closed.wav','101_brass_14_hi-hat_open.wav',
 '2002_14_heavy_hi-hat_chick.wav','116975__cbeeching__hat-open.wav']
 
 titles = ['closed hihat','choke hihat','chick hihat','open hihat']
-
-
-# In[ ]:
-
 x = zip(filenames,titles)
-
-
-# In[ ]:
 
 w = Windowing(type = 'hann')
 gfcc = GFCC()
@@ -66,15 +27,9 @@ spectrum = Spectrum()
 fig = plt.figure()
 i=0
 
-
-# In[ ]:
-
 fig, axs = plt.subplots(2,2)
 fig.subplots_adjust(hspace = 0.3)
 axs = axs.ravel()
-
-
-# In[ ]:
 
 for filename,title in x:
     loader = MonoLoader(filename = os.path.join(pardir,filename))
@@ -100,13 +55,7 @@ for filename,title in x:
 
     i +=1
 
-
-# In[ ]:
-
 plt.show()
-
-
-# In[ ]:
 
 # for filename,title in x:
 #     loader = MonoLoader(filename = os.path.join(pardir,filename))
@@ -131,19 +80,3 @@ plt.show()
 
 
 #     i +=1
-
-
-# In[ ]:
-
-plt.show()
-
-
-# In[ ]:
-
-np.arange(1,13)
-
-
-# In[ ]:
-
-
-

@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[8]:
-
-#http://pandas.pydata.org/
 import pandas as pd
 import numpy as np
 import os
@@ -11,29 +5,11 @@ import ipdb
 import json
 import subprocess
 import yaml
-
-
-# In[2]:
-
 from sklearn.cluster import KMeans,k_means,Birch
-
-
-# In[ ]:
-
 from sklearn import cluster
 
-
-# In[ ]:
-
 path = '../database/recorded_and_downloaded_alt_sounds_processed'
-
-
-# In[ ]:
-
 folders = os.listdir(path)[1:]
-
-
-# In[ ]:
 
 for folder in folders:
     tracks = os.listdir(os.path.join(path,folder))
@@ -41,15 +17,8 @@ for folder in folders:
         if (track[-3:] == 'wav' or track[-3:] == 'WAV'):        
             subprocess.Popen(['essentia_streaming_extractor_freesound',os.path.join(path,folder,track),os.path.join(path,folder,track[:-4] + '.json')])
 
-
-# In[ ]:
-
 feat_df = pd.DataFrame()
 names = np.array([])
-
-
-# In[ ]:
-
 for folder in folders:
     tracks = os.listdir(os.path.join(path,folder))
     for track in tracks:
@@ -101,87 +70,30 @@ for folder in folders:
             feat_df = pd.concat([feat_df,df],ignore_index=True)
 
 
-# In[9]:
-
 feat_df.to_csv('alt_test_all.csv')
-
-
-# In[13]:
-
 feat_df = pd.read_csv('../../../alt_test_set_text_files/json_and_csv/alt_test_all.csv')
-
-
-# In[ ]:
 
 feats = ['spectral_contrast_mean_4','spectral_energyband_middle_low_mean','spectral_contrast_mean_5',
  'spectral_energyband_high_mean','spectral_contrast_var_0']
 
-
-# In[ ]:
-
 new_feat_df = pd.DataFrame()
-
-
-# In[ ]:
 
 for feat in feats:
     new_feat_df[feat] = feat_df[feat]
 
 
-# In[ ]:
-
 new_feat_df
-
-
-# In[ ]:
 
 feat_df.to_csv('alt_test_clustering1.csv')
 
-
-# In[14]:
-
-cd
-
-
-# In[15]:
-
 import pandas2arff
 
-
-# In[16]:
-
 pandas2arff.pandas2arff(feat_df,filename='alt_test_all.arff')
-
-
-# In[ ]:
-
 pandas2arff.pandas2arff(new_feat_df,filename='alt_test_clustering1.arff')
 
-
-# In[6]:
-
 fit_predict = model.fit_predict(X)
-
-
-# # sorted_names = np.array([])
-
-# In[ ]:
 
 for i in np.argsort(fit_predict):
     sorted_names = np.append(sorted_names,names[i])
 
-
-# In[ ]:
-
-sorted_names
-
-
-# In[ ]:
-
 get_ipython().magic(u'pinfo Birch')
-
-
-# In[ ]:
-
-
-

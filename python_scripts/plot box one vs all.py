@@ -1,30 +1,13 @@
-
-# coding: utf-8
-
-# In[5]:
-
 import os
-
 import numpy as np
-
 import pandas as pd
-
 get_ipython().magic(u'matplotlib inline')
-
 from mpl_toolkits.mplot3d import Axes3D
-
 import matplotlib.pyplot as plt
-
 from sklearn.neighbors import KNeighborsClassifier
-
 from sklearn.cross_validation import cross_val_score
-
 from sklearn.preprocessing import MinMaxScaler
-
 import pandas2arff
-
-
-# In[6]:
 
 inst = 'crash'
 
@@ -41,15 +24,9 @@ df_feat = pd.DataFrame()
 for feat in feats:
     df_feat[feat] = df[feat]
 
-
-# In[7]:
-
 X = df_feat.iloc[:,:-1].as_matrix()
 
 y = df_feat['instrument'].as_matrix()
-
-
-# In[8]:
 
 min_max_scaler = MinMaxScaler()
 X = min_max_scaler.fit_transform(X)
@@ -60,8 +37,6 @@ scores = cross_val_score(model,X,y, cv=10)
 
 accuracy = round(np.mean(scores),4)
 
-
-# In[15]:
 
 import numpy as np
 import seaborn as sns
@@ -78,19 +53,3 @@ ax.set_title('accuracy rate: {acc}%'.format(acc = accuracy*100),fontsize = 20)
 # ax.set_title('accuracy rate: 92.19%',fontsize = 20)
 
 sns.plt.show()
-
-
-# In[12]:
-
-df_feat
-
-
-# In[13]:
-
-feats
-
-
-# In[ ]:
-
-
-

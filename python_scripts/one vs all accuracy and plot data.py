@@ -1,32 +1,14 @@
-
-# coding: utf-8
-
-# In[ ]:
-
 import os
-
 import numpy as np
-
 import pandas as pd
-
 # %matplotlib inline
-
 from mpl_toolkits.mplot3d import Axes3D
-
 import matplotlib.pyplot as plt
-
 import matplotlib.cm as cm
-
 import seaborn as sns
-
 from sklearn.neighbors import KNeighborsClassifier
-
 from sklearn.cross_validation import cross_val_score
-
 from sklearn.preprocessing import MinMaxScaler
-
-
-# In[ ]:
 
 # one = 'snare'
 
@@ -49,23 +31,11 @@ df_feat = pd.DataFrame()
 
 for feat in feats:
     df_feat[feat] = df[feat]
-
-
-# In[ ]:
-
 # import pandas2arff
 
 # pandas2arff.pandas2arff(df_feat,filename='rim_vs_all_15feats.arff',wekaname = 'instrument')
-
-
-# In[ ]:
-
 X = df_feat.iloc[:,:-1].as_matrix()
-
 y = df_feat['instrument'].as_matrix()
-
-
-# In[ ]:
 
 min_max_scaler = MinMaxScaler()
 X = min_max_scaler.fit_transform(X)
@@ -76,13 +46,7 @@ scores = cross_val_score(model,X,y, cv=10)
 
 accuracy = np.mean(scores)
 
-
-# In[ ]:
-
-accuracy
-
-
-# In[ ]:
+####################################################################
 
 crash = df_feat[df_feat['instrument'] == 'crash']
 crash_matrix = crash.iloc[:,:-1].as_matrix()
@@ -105,8 +69,7 @@ tom_matrix = tom.iloc[:,:-1].as_matrix()
 kick = df_feat[df_feat['instrument'] == 'kick']
 kick_matrix = kick.iloc[:,:-1].as_matrix()
 
-
-# In[ ]:
+####################################################################
 
 # red = df_feat[df_feat['instrument'] == one]
 # red_matrix = red.iloc[:,-2:-1].as_matrix()
@@ -115,8 +78,7 @@ kick_matrix = kick.iloc[:,:-1].as_matrix()
 # blue = df_feat[df_feat['instrument'] != one]
 # blue_matrix = blue.iloc[:,-2:-1].as_matrix()
 
-
-# In[ ]:
+####################################################################
 
 # x_red = np.ravel(red.iloc[:,:1].as_matrix())
 # y_red = np.ravel(red.iloc[:,1:2].as_matrix())
@@ -149,8 +111,7 @@ kick_matrix = kick.iloc[:,:-1].as_matrix()
 
 # plt.show()
 
-
-# In[ ]:
+####################################################################
 
 x_crash = np.ravel(crash.iloc[:,:1].as_matrix())
 y_crash = np.ravel(crash.iloc[:,1:2].as_matrix())
@@ -211,8 +172,7 @@ plt.title('Classification accuracy = {acc}%'.format(acc = round(accuracy*100.0,2
 
 plt.show()
 
-
-# In[ ]:
+####################################################################
 
 # plt.ylim([-1,2])
 # val = 0. # this is the value where you want the data to appear on the y-axis.
@@ -233,8 +193,7 @@ plt.show()
 
 # plt.show()
 
-
-# In[ ]:
+####################################################################
 
 # plt.ylim([-1,7])
 
@@ -254,8 +213,7 @@ plt.show()
 # plt.yticks(y,tix,fontsize = '16')
 # plt.show()
 
-
-# In[ ]:
+####################################################################
 
 # sns.set(color_codes=True)
 # np.random.seed(sum(map(ord, "distributions")))
@@ -277,9 +235,5 @@ plt.show()
 
 
 # sns.plt.show()
-
-
-# In[ ]:
-
 
 

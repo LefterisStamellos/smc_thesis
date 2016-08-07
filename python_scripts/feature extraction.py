@@ -1,8 +1,3 @@
-
-# coding: utf-8
-
-# In[1]:
-
 #http://pandas.pydata.org/
 import pandas as pd
 #https://github.com/saurabhnagrecha/Pandas-to-ARFF
@@ -13,25 +8,11 @@ import json
 import yaml
 import subprocess
 
-
-# In[2]:
-
 feat_df = pd.DataFrame()
 
-
-# In[3]:
-
 pardir = '../../../web_app/static/alt_sounds'
-
-
-# In[4]:
-
-# folders = os.listdir(pardir)[1:]
-
-
-# In[5]:
-
 names = np.array([])
+
 # for folder in folders:
 # tracks = [track for track in os.listdir(os.path.join(pardir,folder)) if (track[-3:] == 'wav' or track[-3:] == 'WAV')]
 tracks = [track for track in os.listdir(pardir) if (track[-3:] == 'wav' or track[-3:] == 'WAV')]
@@ -87,22 +68,9 @@ for track in tracks:
         feat_df = pd.concat([feat_df,df],ignore_index=True)
 
 
-# In[6]:
-
 df_names = pd.DataFrame()
-
-
-# In[7]:
-
 df_names['names'] = names
-
-
-# In[8]:
-
 df_names.to_csv('alt_test_names_with_unspecified.csv')
-
-
-# In[9]:
 
 feat_df.to_csv('alt_test_with_unspecified_all_feats.csv')
 

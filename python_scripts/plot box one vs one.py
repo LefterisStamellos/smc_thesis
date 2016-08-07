@@ -1,30 +1,13 @@
-
-# coding: utf-8
-
-# In[ ]:
-
 import os
-
 import numpy as np
-
 import pandas as pd
-
 # %matplotlib inline
-
 from mpl_toolkits.mplot3d import Axes3D
-
 import matplotlib.pyplot as plt
-
 from sklearn.neighbors import KNeighborsClassifier
-
 from sklearn.cross_validation import cross_val_score
-
 from sklearn.preprocessing import MinMaxScaler
-
 import pandas2arff
-
-
-# In[ ]:
 
 inst1 = 'ride'
 inst2 = 'rim'
@@ -34,24 +17,14 @@ pardir = '../experiment_text_files/big_train_set_files/json_and_csv/1classVS1cla
 filename = '{inst1}_vs_{inst2}_nosil.csv'.format(inst1 = inst1,inst2 = inst2)
 
 feats = ['effective_duration_mean','instrument']
-
 df = pd.read_csv(os.path.join(pardir,filename))
 
 df_feat = pd.DataFrame()
-
 for feat in feats:
     df_feat[feat] = df[feat]
 
-
-# In[ ]:
-
 X = df_feat.iloc[:,:-1].as_matrix()
-
 y = df_feat['instrument'].as_matrix()
-
-
-# In[ ]:
-
 min_max_scaler = MinMaxScaler()
 X = min_max_scaler.fit_transform(X)
 
@@ -60,9 +33,6 @@ model = KNeighborsClassifier(n_neighbors = 1,algorithm = 'brute',metric = 'manha
 scores = cross_val_score(model,X,y, cv=10)
 
 accuracy = round(np.mean(scores),4)
-
-
-# In[ ]:
 
 import numpy as np
 import seaborn as sns
@@ -77,9 +47,3 @@ ax.set_ylabel('')
 ax.set(xticklabels=[])
 
 sns.plt.show()
-
-
-# In[ ]:
-
-
-

@@ -1,22 +1,10 @@
-
-# coding: utf-8
-
-# In[1]:
-
 import numpy as np
-
 import pandas as pd
-
 from sklearn.ensemble import RandomForestClassifier
-
 from sklearn.neighbors import KNeighborsClassifier
-
 from sklearn.cross_validation import cross_val_score
-
 from sklearn.metrics import confusion_matrix
-
 from sklearn.preprocessing import MinMaxScaler
-
 import os
 
 # df_train = pd.DataFrame()
@@ -33,7 +21,7 @@ df = pd.read_csv(os.path.join(pardir,filename))
 df = df.iloc[:,1:]
 
 
-# In[ ]:
+####################################################################
 
 # # ######## features for percussive vs non-percussive classification #######################
 # # # feats = ['temporal_centroid_mean','temporal_skewness_mean','effective_duration_mean','logattacktime_mean',
@@ -57,134 +45,62 @@ df = df.iloc[:,1:]
 #   'mfcc_mean_1','spectral_contrast_var_4','gfcc_mean_3','spectral_energyband_high_mean']
 
 
-# In[ ]:
+####################################################################
 
 # df_X = pd.DataFrame()
 # for feat in feats:
 #     df_X[feat] = df[feat]
 
 
-# In[2]:
-
 X = df.iloc[:,:-1].as_matrix()
-
-
-# In[3]:
-
 y = df['instrument'].as_matrix()
 
 
-# In[ ]:
+####################################################################
 
 # ###### Random Forest, 100 Trees ###############
 # model = RandomForestClassifier(n_estimators = 100)
 # scores = cross_val_score(model,X,y, cv=10)
 
+####################################################################
 
-# In[5]:
-
+###### KNN manhattan ###############
 min_max_scaler = MinMaxScaler()
 X = min_max_scaler.fit_transform(X)
 
-
-# In[10]:
-
-###### KNN manhattan ###############
 model = KNeighborsClassifier(n_neighbors = 1,algorithm = 'brute',metric = 'manhattan',weights = 'uniform')
 scores = cross_val_score(model,X,y, cv=10)
 
-
-# In[11]:
-
-np.mean(scores)
-
-
-# In[ ]:
-
 df_predict = pd.DataFrame()
-
-
-# In[ ]:
-
 df_p = pd.read_csv('../../../alt_test_set_text_files/json_and_csv/big_alt_test.csv')
-
-
-# In[ ]:
 
 for feat in feats:
     df_predict[feat] = df_p[feat]
 
-
-# In[ ]:
-
 X_predict = df_predict.as_matrix()
 
-
-# In[ ]:
-
 pardir = '../database/all_recorded_and_downloaded_alt_sounds_processed'
-
-
-# In[ ]:
-
 names = np.array([])
-
-
-# In[ ]:
 
 import os
 
-
-# In[ ]:
-
 folders = os.listdir(pardir)[1:]
-
-
-# In[ ]:
-
 for folder in folders:
     tracks = os.listdir(os.path.join(pardir,folder))
     for track in tracks:
         if track[-3:] == 'wav' or track[-3:] == 'WAV':
             names = np.append(names,track[:-4])
 
-
-# In[ ]:
-
 df_results['names'] = names
-
-
-# In[ ]:
-
 df_results['expected_class'] = df_p['instrument'].as_matrix()
-
-
-# In[ ]:
-
 df_results['predicted_class'] = model.predict(X_predict)
-
-
-# In[ ]:
-
 #df_results[df_results['expected_class'] == 'crash_choke']
-
-
-# In[ ]:
 
 df_results_stats = pd.DataFrame()
 
-
-# In[ ]:
-
 instruments = np.unique(y_test)
 
-
-# In[ ]:
-
 df_results_stats['class'] = instruments
-
-
-# In[ ]:
 
 correct_classification = np.array([])
 class_size = np.array([])
@@ -196,28 +112,7 @@ for instrument in instruments:
 df_results_stats['correct_classification_%'] = correct_classification
 df_results_stats['class_size'] = class_size
 
-
-# In[ ]:
-
-df_results_stats
-
-
-# In[ ]:
-
-df_results_stats[df_results_stats['class'] == 'hihat_closed'] 
-
-
-# In[ ]:
-
-df_results_stats[df_results_stats['correct_classification_%'] == 0.] 
-
-
-# In[ ]:
-
-df_results[df_results['expected_class'] == 'crash_choke']
-
-
-# In[ ]:
+####################################################################
 
 from StringIO import StringIO
 import subprocess
@@ -241,20 +136,9 @@ except Exception, e:
 os.system('rm tmp.dot')
 
 
-# In[ ]:
-
 from IPython.display import Image
 Image(filename='tree.png') 
-
-
-# In[ ]:
 
 X_pred = model.predict(X_test)
 import sklearn.metrics
 sklearn.metrics.accuracy_score(y_test, X_pred)
-
-
-# In[ ]:
-
-
-

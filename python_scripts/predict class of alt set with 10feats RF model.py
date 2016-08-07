@@ -1,34 +1,16 @@
-
-# coding: utf-8
-
-# In[1]:
-
 import numpy as np
-
 import pandas as pd
-
 import os
-
 import random
-
 from sklearn.externals import joblib
-
 from essentia.standard import MonoLoader
-
 import sounddevice
-
 import IPython
-
-
-# In[2]:
 
 # Load the Classifier
 pardir = '../experiment_text_files/big_train_set_files/npy/7_classes/RF100TreesModel_real_set_15featsNEW'
 filename = 'RandomForestClassifier_real_set.pkl'
 model = joblib.load(os.path.join(pardir,filename))
-
-
-# In[3]:
 
 # Load the alt sounds' feature values for the 32 "commonly selected" (best) features
 
@@ -43,17 +25,11 @@ filename = 'alt_test_with_unspecified_15featsNEW.csv'
 df = pd.DataFrame()
 df = pd.read_csv(os.path.join(pardir,filename))
 
-
-# In[4]:
-
 # without unspecified
 # df = df.iloc[:,1:-1]
 
 #with unspecified
 df = df.iloc[:,1:]
-
-
-# In[5]:
 
 #Load the alt sounds' filenames (e.g. 123456.wav) for collection without unspecified
 # filename = 'alt_test_set_names_7classes_balanced.csv'
@@ -64,23 +40,14 @@ filename = 'alt_test_names_with_unspecified.csv'
 df_names = pd.read_csv(os.path.join(pardir,filename))
 df_names = df_names.iloc[:,1:]
 
-
-# In[6]:
-
 # Turn stuff from DataFrames to matrices
 X = df.as_matrix()
 music_filenames = df_names.as_matrix()
-
-
-# In[ ]:
 
 ########### We could have stored the predicted class of each sound in our collection. Then, when looking for ############
 # an instrument, we would pick t random one of those predicted as said instrument. Instead, we pick sounds at random, 
 # give it to our classifier and check if said sound is classified as one of the instruments we are interested in. This
 #might be the slower choice, but it allows us to change the sound collection without changing our model.
-
-
-# In[ ]:
 
 # ####### drumloops #################
 
@@ -115,7 +82,7 @@ music_filenames = df_names.as_matrix()
 #     drumloops_dict_with_wav[drumloop] = (instruments,music_files)
 
 
-# In[ ]:
+####################################################################
 
 # wavs = drumloops_dict_with_wav['drumloop3'][1]
 # instruments = drumloops_dict_with_wav['drumloop3'][0]
@@ -136,7 +103,7 @@ music_filenames = df_names.as_matrix()
 #     IPython.display.display(IPython.display.Audio(os.path.join(pardir,wavs[i])))
 
 
-# In[ ]:
+####################################################################
 
 # # ############## ask for one instrument, get one real and one random alternative ##############
 
@@ -159,7 +126,7 @@ music_filenames = df_names.as_matrix()
 # real_instrument = random.choice(real_instruments_wavs)
 
 
-# In[ ]:
+####################################################################
 
 #without unspecified
 # alt_pardir = '../database/alt_set_wavs/without_unspecified_unbalanced'
@@ -176,7 +143,7 @@ music_filenames = df_names.as_matrix()
 # IPython.display.display(IPython.display.Audio(os.path.join(alt_pardir,alt_instrument[0])))
 
 
-# In[ ]:
+####################################################################
 
 # # ############## ask for one instrument, get 3 real and one random alternative ##############
 
@@ -200,7 +167,7 @@ music_filenames = df_names.as_matrix()
 # real_instruments = random.sample(real_instruments_wavs,3)
 
 
-# In[ ]:
+####################################################################
 
 #without unspecified
 # alt_pardir = '../database/alt_set_wavs/without_unspecified_unbalanced'
@@ -219,7 +186,7 @@ music_filenames = df_names.as_matrix()
 #     IPython.display.display(IPython.display.Audio(os.path.join(real_pardir,inst)))
 
 
-# In[35]:
+####################################################################
 
 # ############## ask for one instrument, get 1 real and three random alternative ##############
 
@@ -244,9 +211,6 @@ while (len(alt_instruments) < 3):
 
 real_instrument = random.choice(real_instruments_wavs)
 
-
-# In[36]:
-
 #without unspecified
 # alt_pardir = '../database/alt_set_wavs/without_unspecified_unbalanced'
 
@@ -263,9 +227,3 @@ print 'alternative '+instrument+'s'+ '\n'
 for inst in alt_instruments:
     print inst
     IPython.display.display(IPython.display.Audio(os.path.join(alt_pardir,inst)))
-
-
-# In[ ]:
-
-
-
