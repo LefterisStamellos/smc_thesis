@@ -1,0 +1,2139 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="/static/css/exp-main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+
+
+    </head>
+<body>
+<header>
+  <img src="/static/img/logo.jpg" alt="">
+</header>
+
+<script type="text/javascript">
+  counter = 0;
+</script>
+
+<div class="row container">
+
+<form id="step0"  action="">
+  <p style="font-size:20px"> Hello and welcome. This is an experiment conducted in the context of my (Lefteris Stamellos) master thesis for the Sound and Music Computing master's programme of Universitat Pompeu Fabra, under the title <i>Freesound drumsets using unconventional sounds</i>.</p>
+  <p style="font-size:20px"> The project's purpose was to to develop an algorithm capable of mapping non-drum sounds to instruments of a standard drum kit. This experiment aims at assessing the resulting system's efficiency.</p> <p style="font-size:20px"><b> You will be asked to listen to 20 percussive sequences</b> constructed with random beaten objects (pots, pans, kitchen counters, tubes, etc) or other rapid sounds such as barks, shouts, scratches and hisses. Each sequence is accompanied by three simple questions. We also need you to fill a questionnaire with some personal details so that we can contact you later. Be assured that we take great care in ensuring anonymity of responses! This means that your personal data shall in no case be associated to your questionnaire answers.</p>
+  <p style="font-size:20px"> You are strongly advised to proceed with the use of headphones. Please try and be honest, there is no right and wrong answer, this is a simple experiment, not a test. It should not take longer than 10 minutes.</p>
+  <p style="font-size:20px"> One final disclaimer: DO NOT push refresh in any page, otherwise your answers will be lost. </p>
+
+  <!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Proceed to experiment!">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<form id="step1"  action="">
+
+  <div class="large-6 large-centered question">
+  <h4>Have you ever received any formal musical training?</h4>
+    <label>
+      <input type="radio" value="no_train" name="train" required> No
+    </label>
+    <label>
+      <input type="radio" value="train_under5" name="train" required> Yes, for less than 5 years
+    </label>
+    <label>
+      <input type="radio" value="train_over5" name="train" required> Yes, for more than 5 years
+    </label>
+    </div>
+
+  <div class="large-6 large-centered question">
+  <h4>Do you compose music (or have you ever done so)? Either as an amateur or in a professional level, no matter the musical genre</h4>
+    <label>
+      <input type="radio" value="no_compose" name="compose" required> No
+    </label>
+    <label>
+      <input type="radio" value="yes_compose" name="compose" required> Yes
+    </label>
+    </div>
+
+    <div class="large-6 large-centered question">
+  <h4>Do you play the drums or any other percussion instrument(s)?</h4>
+    <label>
+      <input type="radio" value="no_drums" name="perc" required> No
+    </label>
+    <label>
+      <input type="radio" value="yes_drums" name="perc" required> Yes
+    </label>
+    </div>
+
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step2">
+
+<!-- <h4 id = "myCounter2"></h4>
+  <script type="text/javascript">
+  window.onload = function() {
+      /* Add your logic here */
+      counter = counter+1
+      // document.getElementById("myCounter2").innerHTML=counter;
+      document.getElementById("myCounter2").innerHTML="step2";
+  }
+  </script> -->
+
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="first-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert1" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert1" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert2" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert2" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert3" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert3" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step3">
+
+<!-- <h4 type = "text" id = "myCounter3"></h4>
+<script type="text/javascript">
+  window.onload = function() {
+      counter = counter+1
+      // document.getElementById("myCounter3").innerHTML=counter;
+      document.getElementById("myCounter3").innerHTML="step3";
+  }
+</script> -->
+
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="second-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert4" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert4" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert5" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert5" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert6" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert6" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step4">
+
+<!-- <h4 type = "text" id = "myCounter4"></h4>
+<script type="text/javascript">
+  window.onload = function() {
+      counter = counter+1
+      // document.getElementById("myCounter4").innerHTML=counter;
+      document.getElementById("myCounter4").innerHTML="step4";
+  }
+</script> -->
+
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="third-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert7" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert7" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert8" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert8" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert9" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert9" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step5">
+
+<!-- <h4 type = "text" id = "myCounter"></h4>
+<script type="text/javascript">
+  window.onload = function() {
+      counter = counter+1
+      // document.getElementById("myCounter5").innerHTML=counter;
+      document.getElementById("myCounter5").innerHTML="step5";
+  }
+</script> -->
+
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="fourth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert10" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert10" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert11" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert11" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert12" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert12" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step6">
+
+<!-- <h4 type = "text" id = "myCounter6"></h4>
+<script type="text/javascript">
+  window.onload = function() {
+      counter = counter+1
+      // document.getElementById("myCounter6").innerHTML=counter;
+      document.getElementById("myCounter6").innerHTML="step6";
+  }
+</script> -->
+
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="fifth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert13" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert13" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert14" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert14" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert15" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert15" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step7">
+<!-- <h4 type = "text" id = "myCounter"></h4> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="sixth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert16" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert16" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert16" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert16" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert16" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert17" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert17" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert17" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert17" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert17" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert18" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert18" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert18" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert18" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert18" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step8">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="seventh-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert19" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert19" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert19" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert19" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert19" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert20" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert20" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert20" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert20" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert20" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert21" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert21" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert21" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert21" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert21" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step9">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="eighth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert22" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert22" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert22" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert22" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert22" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert23" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert23" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert23" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert23" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert23" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert24" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert24" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert24" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert24" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert24" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+
+<form action="" id="step10">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="nineth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert25" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert25" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert25" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert25" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert25" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert26" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert26" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert26" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert26" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert26" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert27" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert27" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert27" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert27" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert27" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step11">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="tenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert28" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert28" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert28" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert28" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert28" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert29" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert29" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert29" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert29" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert29" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert30" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert30" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert30" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert30" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert30" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step12">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="eleventh-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert31" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert31" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert31" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert31" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert31" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert32" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert32" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert32" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert32" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert32" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert33" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert33" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert33" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert33" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert33" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step13">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="twelveth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert34" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert34" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert34" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert34" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert34" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert35" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert35" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert35" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert35" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert35" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert36" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert36" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert36" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert36" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert36" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step14">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="thirteenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert37" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert37" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert37" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert37" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert37" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert38" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert38" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert38" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert38" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert38" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert39" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert39" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert39" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert39" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert39" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step15">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="fourteenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert40" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert40" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert40" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert40" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert40" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert41" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert41" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert41" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert41" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert41" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert42" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert42" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert42" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert42" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert42" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step16">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="fifteenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert43" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert43" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert43" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert43" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert43" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert44" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert44" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert44" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert44" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert44" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert45" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert45" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert45" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert45" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert45" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step17">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="sixteenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert46" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert46" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert46" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert46" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert46" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert47" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert47" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert47" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert47" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert47" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert48" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert48" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert48" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert48" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert48" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step18">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="seventeenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert49" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert49" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert49" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert49" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert49" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert50" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert50" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert50" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert50" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert50" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert51" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert51" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert51" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert51" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert51" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step19">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="eighteenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert52" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert52" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert52" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert52" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert52" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert53" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert53" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert53" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert53" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert53" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert54" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert54" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert54" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert54" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert54" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+
+<form action="" id="step20">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="nineteenth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert55" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert55" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert55" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert55" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert55" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert56" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert56" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert56" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert56" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert56" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert57" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert57" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert57" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert57" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert57" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END -->
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action="" id="step21">
+<!-- <p id = "myCounter"></p> -->
+<!-- PLAY BUTTON START -->
+    <div class="play-button paused" id="twentieth-loop">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="triangle-1"></div>
+      <div class="triangle-2"></div>
+   </div>
+<!-- PLAY BUTTON END -->
+
+<!-- QUESTION 1 START -->
+  <h4 class="large-6 large-centered">If this pattern was performed on a conventional drum set, the result would sound similar to the above sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert58" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert58" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert58" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert58" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert58" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 1 END -->
+
+<!-- QUESTION 2 START -->
+  <h4 class="large-6 large-centered">This sound clip could replace a conventional drum set in a musical track</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert59" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert59" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert59" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert59" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert59" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 2 END -->
+
+<!-- QUESTION 3 START -->
+  <h4 class="large-6 large-centered">I like this sound clip</h4>
+   <ul class='row likert'>
+      <li>
+        <input type="radio" name="likert60" value="strong_disagree" required>
+        <label>Strongly disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert60" value="disagree" required>
+        <label>Disagree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert60" value="neutral" required>
+        <label>Neutral</label>
+      </li>
+      <li>
+        <input type="radio" name="likert60" value="agree" required>
+        <label>Agree</label>
+      </li>
+      <li>
+        <input type="radio" name="likert60" value="strong_agree" required>
+        <label>Strongly agree</label>
+      </li>
+    </ul>
+<!-- QUESTION 3 END --4
+
+<!-- NEXT STEP BUTTON START -->
+<div class="large-6 large-centered step">
+  <input type="submit" class="button" value="Next Step">
+</div>
+<!-- NEXT STEP BUTTON END -->
+
+</form>
+
+<!-- ########################################################### -->
+
+<form action = "" id = "final">
+
+  <h1>That's that!!! Thanks a million</h1>
+
+  <div class="large-6 large-centered step">
+  <input id="final-button" type="submit" class="button" value="Click submit to finish the experiment">
+  </div>
+
+</form>
+
+<!-- ########################################################### -->
+
+    <div id="app">
+      <div class="app-region" id="r-head"></div>
+      <div class="app-region" id="r-top"></div>
+      <div class="app-region" id="r-mid"></div>
+      <div class="app-region" id="r-bottom"></div>
+      <div class="app-region" id="r-footer"></div>
+    </div>
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  <script src="/static/js/exp-app.js"></script>
+    </body>
+</html>
